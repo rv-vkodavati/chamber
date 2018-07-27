@@ -9,10 +9,9 @@ withEnv([
         checkout scm
         
         }
-      }
 
       stage('Build the deploy image') {
         sh 'make docker/build'
       }
-
+}
 }
