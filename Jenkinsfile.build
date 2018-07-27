@@ -1,0 +1,18 @@
+#!/usr/bin/env groovy
+
+withEnv([
+  "BUILD_VERSION=v${env.BUILD_NUMBER}"
+]) {  
+    node('rvmain_docker') {
+
+      stage('Validating') {
+        checkout scm
+        
+        }
+      }
+
+      stage('Build the deploy image') {
+        sh 'make docker/build'
+      }
+
+}
