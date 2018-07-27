@@ -11,7 +11,7 @@ withEnv([
         }
 
       stage('Build the deploy image') {
-        sh 'make docker/build'
+        sh 'make all'
       }
 }
 }
